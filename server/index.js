@@ -7,8 +7,15 @@ import productRouter from './routers/invoice.routes.js';
 
 const app = express();
 
-// Enable CORS for all origins
-app.use(cors());
+// Configure CORS options
+const corsOptions = {
+    origin: '*',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    allowedHeaders: 'Content-Type,Authorization,x-access-token',
+};
+
+// Enable CORS with the above options
+app.use(cors(corsOptions));
 
 app.use(express.json());
 
