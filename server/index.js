@@ -7,14 +7,15 @@ import productRouter from './routers/invoice.routes.js';
 
 const app = express();
 
-// Configure CORS options
+// CORS configuration to allow the specific origin
 const corsOptions = {
-    origin: '*',
+    origin: 'https://invoisely.vercel.app',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    allowedHeaders: 'Content-Type,Authorization,x-access-token',
+    allowedHeaders: 'Content-Type,Authorization',
+    credentials: true,
 };
 
-// Enable CORS with the above options
+// Enable CORS with specific options
 app.use(cors(corsOptions));
 
 app.use(express.json());
