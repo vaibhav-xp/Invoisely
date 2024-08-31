@@ -7,9 +7,6 @@ import productRouter from './routers/invoice.routes.js';
 
 const app = express();
 
-// Handling preflight requests
-app.options('*', cors());
-
 // Enable CORS for all origins
 app.use(cors());
 
