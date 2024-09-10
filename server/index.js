@@ -26,7 +26,7 @@ app.use('/api/invoice', productRouter);
 
 app.get("/", (req, res) => {
     return res.json({
-        status: Ok,
+        status: "Ok",
         message: "Everything is ok."
     })
 })
