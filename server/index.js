@@ -24,7 +24,7 @@ app.use(express.json());
 app.use('/api/user/', userRouter);
 app.use('/api/invoice', productRouter);
 
-app.get("/", (res, res) => {
+app.get("/", (req, res) => {
     return res.json({
         status: Ok,
         message: "Everything is ok."
