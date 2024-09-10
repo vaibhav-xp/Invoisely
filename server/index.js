@@ -24,6 +24,13 @@ app.use(express.json());
 app.use('/api/user/', userRouter);
 app.use('/api/invoice', productRouter);
 
+app.get("/", (res, res) => {
+    return res.json({
+        status: Ok,
+        message: "Everything is ok."
+    })
+})
+
 // app listening
 app.listen(PORT, () => {
     console.log("Server is connected at " + PORT);
