@@ -9,10 +9,9 @@ const app = express();
 
 // CORS configuration to allow the specific origin
 const corsOptions = {
-    origin: 'https://invoisely.vercel.app',
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    allowedHeaders: 'Content-Type,Authorization',
-    credentials: true,
+    origin: 'https://invoisely.vercel.app',  // Allow requests from your frontend domain
+    methods: 'GET,POST,PUT,DELETE',
+    allowedHeaders: ['Content-Type', 'Authorization', 'x-access-token'],
 };
 
 // Enable CORS with specific options
